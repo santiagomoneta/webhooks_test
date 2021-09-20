@@ -1,0 +1,45 @@
+{
+    "name": "HTIR APPS",
+    "environment": "UAT",
+    "clhub_environment": "ei-ss-dev",
+    "configuration_source": "ei-success-service-cac",
+    "deployment_strategy": "rollback_on_errors",
+    "config_version": "13.0.3",
+    "jobs":
+    [
+        {
+            "resource_name": "ei-cdc-salesforce-hntsobject-source-adapter",
+            "api_version": "1.0",
+            "source_version": "1.0.7",
+            "config_version": "13.0.4",
+            "job_type": "APP_DEPLOYMENT_AND_CONFIG_UPDATE",
+            "resource_type": "cloudhub_api",
+            "sub_resource_name": "org62-de-hntcase-source",
+            "sequence": 1
+        },
+        {
+            "resource_name": "ei-cdc-salesforce-hntsobject-source-adapter",
+            "version": "1.0.8"
+            "job_type": "APP_DEPLOYMENT_AND_CONFIG_UPDATE",
+            "resource_type": "cloudhub_api",
+            "sub_resource_name": "org62-de-hntcase-source",
+            "sequence": 2
+        },
+          {
+            "resource_name": "ei-cdc-salesforce-hntsobject-source-adapter",
+            "version": "1.0.9"
+            "job_type": "APP_DEPLOYMENT_AND_CONFIG_UPDATE",
+            "resource_type": "cloudhub_api",
+            "sub_resource_name": "org62-de-hntcase-source",
+            "sequence": 3
+        },
+        {
+            "resource_name": "ei-cdc-salesforce-hntsobject-target-adapter",
+            "version": "1.0.9"
+            "job_type": "APP_DEPLOYMENT_AND_CONFIG_UPDATE",
+            "resource_type": "cloudhub_api",
+            "sub_resource_name": "org62-de-hntcase-target0",
+            "sequence": 4
+        }
+    ]
+}
